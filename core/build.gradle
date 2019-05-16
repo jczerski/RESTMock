@@ -45,6 +45,7 @@ dependencies {
 
     testCompile "junit:junit:4.12"
     testCompile "org.mockito:mockito-all:1.9.5"
+    testCompile 'com.squareup.okio:okio:2.2.2'
     testCompile "com.squareup.okhttp3:okhttp:${okHttpVersion}"
     testCompile "com.google.code.findbugs:annotations:2.0.3"
 }

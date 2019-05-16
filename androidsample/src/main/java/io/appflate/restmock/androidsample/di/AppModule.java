@@ -41,7 +41,6 @@ public class AppModule {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
-        GithubApi githubApi = retrofit.create(GithubApi.class);
-        return githubApi;
+        return retrofit.create(GithubApi.class);
     }
 }
