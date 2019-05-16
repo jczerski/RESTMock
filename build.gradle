@@ -43,7 +43,6 @@ allprojects {
 }
 
 ext.okHttpVersion = "4.0.0-alpha01"
-ext.supportVersion = "28.0.0"
 
 ext.preDexLibraries = project.hasProperty('preDexLibraries')
 

@@ -16,7 +16,7 @@
 
 package io.appflate.restmock.androidsample.tests;
 
-import android.support.test.rule.ActivityTestRule;
+import androidx.test.rule.ActivityTestRule;
 
 import org.junit.Before;
 import org.junit.Rule;
@@ -31,7 +31,6 @@ import okhttp3.mockwebserver.MockResponse;
 import static io.appflate.restmock.utils.RequestMatchers.hasQueryParameterNames;
 import static io.appflate.restmock.utils.RequestMatchers.hasQueryParameters;
 import static io.appflate.restmock.utils.RequestMatchers.pathEndsWith;
-import static io.appflate.restmock.utils.RequestMatchers.pathEndsWithIgnoringQueryParams;
 import static io.appflate.restmock.utils.RequestMatchers.pathStartsWith;
 import static org.hamcrest.CoreMatchers.not;
 
