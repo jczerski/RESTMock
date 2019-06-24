@@ -36,16 +36,12 @@ public class RESTMockServerStarter {
         ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(1, 1, KEEP_ALIVE_TIME, TimeUnit.SECONDS,
                                                                        new LinkedBlockingQueue<Runnable>(1));
 
-        threadPoolExecutor.execute(new Runnable() {
-
-            @Override
-            public void run() {
-                try {
-                    RESTMockServer.init(mocksFileParser, logger);
-                } catch (IOException e) {
-                    RESTMockServer.getLogger().error("Server start error", e);
-                    throw new RuntimeException(e);
-                }
+        threadPoolExecutor.execute(() -> {
+            try {
+                RESTMockServer.init(mocksFileParser, logger);
+            } catch (IOException e) {
+                RESTMockServer.getLogger().error("Server start error", e);
+                throw new RuntimeException(e);
             }
         });
         try {
